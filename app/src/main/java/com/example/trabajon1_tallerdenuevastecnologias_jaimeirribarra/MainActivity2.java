@@ -18,24 +18,31 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView TextLabelNombre;
     private String stCarrera;
     private TextView TextInfo;
+    private String stResultado;
+    private TextView TextPromedio;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        TextPromedio=(TextView) findViewById(R.id.TextPromedio);
         TextLabelNombre=(TextView) findViewById(R.id.TextLabelNombre);
         TextInfo=(TextView) findViewById(R.id.TextInfo);
+
         Context context=getApplicationContext();
 
         Bundle intentV=this.getIntent().getExtras();
         if (intentV!=null){
+            stResultado=intentV.getString("resultado");
             stCarrera=intentV.getString("carrera");
             stNombre=intentV.getString("nombre");
-            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+stResultado,Toast.LENGTH_SHORT).show();
         }
 
         TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
-        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ");
+        TextLabelNombre.setText("Su promedio es: "+ stResultado);
+        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+stResultado);
 
         BotonVolver = (Button) findViewById(R.id.buttonVolver);
         Intent intentVol=new Intent(this,MainActivity.class);
