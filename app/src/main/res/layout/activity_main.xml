@@ -154,13 +154,4 @@
         app:layout_constraintStart_toEndOf="@+id/TextNota2"
         tools:text="0.0" />
 
-    <TextView
-        android:id="@+id/textResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="604dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
