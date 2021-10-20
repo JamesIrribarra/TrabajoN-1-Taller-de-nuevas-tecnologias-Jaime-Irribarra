@@ -18,6 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     private TextView TextLabelNombre;
     private String stCarrera;
     private TextView TextInfo;
+    private TextView TextPromedio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         TextLabelNombre=(TextView) findViewById(R.id.TextLabelNombre);
         TextInfo=(TextView) findViewById(R.id.TextInfo);
+        TextPromedio=(TextView) findViewById(R.id.TextPromedio);
+
         Context context=getApplicationContext();
 
         Bundle intentV=this.getIntent().getExtras();
@@ -35,6 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
         TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
+        TextPromedio.setText("Su promedio es: ");
         TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ");
 
         BotonVolver = (Button) findViewById(R.id.buttonVolver);
