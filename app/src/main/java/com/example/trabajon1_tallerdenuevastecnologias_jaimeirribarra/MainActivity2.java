@@ -27,6 +27,8 @@ public class MainActivity2 extends AppCompatActivity {
         TextLabelNombre=(TextView) findViewById(R.id.TextLabelNombre);
         TextPromedio=(TextView) findViewById(R.id.TextPromedio);
         TextInfo=(TextView) findViewById(R.id.TextInfo);
+        TextPromedio=(TextView) findViewById(R.id.TextPromedio);
+
         Context context=getApplicationContext();
 
         Bundle intentV=this.getIntent().getExtras();
