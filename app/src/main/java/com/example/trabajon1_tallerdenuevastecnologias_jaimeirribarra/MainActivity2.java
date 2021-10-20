@@ -19,6 +19,7 @@ public class MainActivity2 extends AppCompatActivity {
     private String stCarrera;
     private TextView TextInfo;
     private TextView TextPromedio;
+    private float resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +36,13 @@ public class MainActivity2 extends AppCompatActivity {
         if (intentV!=null){
             stCarrera=intentV.getString("carrera");
             stNombre=intentV.getString("nombre");
-            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ",Toast.LENGTH_SHORT).show();
+            resultado=intentV.getFloat("resultado");
+            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+ resultado,Toast.LENGTH_SHORT).show();
         }
 
         TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
-        TextPromedio.setText("Su promedio es: ");
-        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: ");
+        TextPromedio.setText("Su promedio es: "+resultado);
+        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+resultado);
 
         BotonVolver = (Button) findViewById(R.id.buttonVolver);
         Intent intentVol=new Intent(this,MainActivity.class);

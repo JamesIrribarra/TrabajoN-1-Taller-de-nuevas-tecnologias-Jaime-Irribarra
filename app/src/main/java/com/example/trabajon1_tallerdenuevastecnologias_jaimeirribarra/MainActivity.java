@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText Textnombre;
     private EditText TextCarrera;
     private EditText nota1,nota2,nota3;
-    private double resulado;
     private float fnota1,fnota2,fnota3,fresultado;
 
     @Override
@@ -40,15 +39,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 intentCalc.putExtra("nombre",Textnombre.getText().toString());
                 intentCalc.putExtra("carrera",TextCarrera.getText().toString());
-
+                intentCalc.putExtra("resultado",fresultado);
 
                 fnota1=Float.parseFloat(nota1.getText().toString());
                 fnota2=Float.parseFloat(nota2.getText().toString());
                 fnota3=Float.parseFloat(nota3.getText().toString());
 
                 fresultado=(fnota1+fnota2+fnota3)/3;
-
-
 
                 startActivity(intentCalc);
             }
