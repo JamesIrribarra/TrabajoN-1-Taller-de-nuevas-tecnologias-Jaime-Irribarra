@@ -119,7 +119,7 @@
         android:id="@+id/TextNota1"
         android:layout_width="84dp"
         android:layout_height="39dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="48dp"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -132,8 +132,8 @@
         android:id="@+id/TextNota2"
         android:layout_width="81dp"
         android:layout_height="42dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="44dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textStyle="bold"
@@ -145,13 +145,22 @@
         android:id="@+id/TextNota3"
         android:layout_width="81dp"
         android:layout_height="42dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="44dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
         app:layout_constraintStart_toEndOf="@+id/TextNota2"
         tools:text="0.0" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="604dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
