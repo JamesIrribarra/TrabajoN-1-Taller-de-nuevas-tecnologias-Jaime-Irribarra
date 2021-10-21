@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText Textnombre;
     private EditText TextCarrera;
     private EditText nota1,nota2,nota3;
-    private float fnota1,fnota2,fnota3,fresultado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +37,12 @@ public class MainActivity extends AppCompatActivity {
         Botoncalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                float Resultado=(Float.parseFloat(nota1.getText().toString())+Float.parseFloat(nota2.getText().toString())+Float.parseFloat(nota3.getText().toString()))/3;
                 intentCalc.putExtra("nombre",Textnombre.getText().toString());
                 intentCalc.putExtra("carrera",TextCarrera.getText().toString());
-                intentCalc.putExtra("resultado", fresultado);
+                intentCalc.putExtra("resultado",Resultado);
 
-                fnota1=Float.parseFloat(nota1.getText().toString());
-                fnota2=Float.parseFloat(nota2.getText().toString());
-                fnota3=Float.parseFloat(nota3.getText().toString());
-
-
-               MainActivity.this.fresultado = (fnota1+fnota2+fnota3)/3;
 
                 startActivity(intentCalc);
             }
