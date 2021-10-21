@@ -39,15 +39,16 @@ public class MainActivity2 extends AppCompatActivity {
 
         Context context=getApplicationContext();
 
-        TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
-        TextPromedio.setText("Su promedio es: "+Resultado);
-        TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+Resultado);
+
 
         BotonVolver = (Button) findViewById(R.id.buttonVolver);
         Intent intentVol=new Intent(this,MainActivity.class);
 
         if (intentV!=null){
 
+            TextLabelNombre.setText("Nombre del estudiante: "+ stNombre);
+            TextPromedio.setText("Su promedio es: "+Resultado);
+            TextInfo.setText("Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+Resultado);
             Toast.makeText(context,"Estudiante: "+stNombre + " de la Carrera "+stCarrera+ " Su promedio es: "+Resultado,Toast.LENGTH_SHORT).show();
         }
 
