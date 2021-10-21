@@ -48,7 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         if (intentV!=null){
 
-            Toast.makeText(context,"Estudiante: "+stNombre + " de la carrera "+stCarrera+ " Su promedio es: "+Resultado,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Estudiante: "+stNombre + " de la Carrera "+stCarrera+ " Su promedio es: "+Resultado,Toast.LENGTH_SHORT).show();
         }
 
         BotonVolver.setOnClickListener(new View.OnClickListener() {
